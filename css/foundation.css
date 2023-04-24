@@ -1,4 +1,4 @@
-/* CSS HEX {
+/* Colors Used {
     royal-blue-traditional: #002166ff;
     rich-black: #020317ff;
     fuchsia: #F008FBff;
@@ -10,115 +10,143 @@
     prussian-blue: #032940ff; 
 } */
 
+/* Page formatting */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-
+/* Striped background */
 body {
-    background-image: url(../assets/images/body.jpg);
-    min-height: 100vh;
-    width: 100%;
-    background-repeat: repeat;
+  height: 100;
+  background: repeating-linear-gradient(
+    to bottom,
+    #00072e 0px,
+    #00072e 5px,
+    #08206b 5px,
+    #050e44 2px,
+    #08206b 10px,
+    #050e44 10px);
+  background-repeat: repeat;
 }
 
+/* crushcalculator.com logo sizing */
 .logo {
     height: 170px;
     width: 300px;
 }
 
+/* Header adjustments, background + placement */
 header {
+  min-width: 100%;
     display: flex;
     justify-content: center;
     justify-items: center;
     background-image: url(../assets/images/header.jpg);
     background-position: center;
-    background-repeat: no-repeat;
+    background-repeat: repeat-x;
     position: relative;
     background-size: cover;
     height: 30%;
-    }
+}
 
+/* Love Calculator + Urban Dictionary boxes alignment */
 .main {
     display: flex;
     justify-content: space-between;
     
 }
 
+/* Love Calculator box design */
 .tab1{
     margin: 5%;
     border: 10px solid #F008FBff;
     border-radius: 20px;
     padding: 30px;
     width: 42.5%;
+    color: white;
+    font-family: 'Montserrat', sans-serif;;
 }
 
+/* Love Calculator result box design */
 .tab1result {
     margin: 5%;
     border: 10px solid #F008FBff;
     border-radius: 20px;
     padding: 30px;
     width: 42.5%;
+    font-family: 'Montserrat', sans-serif;
     color:aliceblue;
 }
 
+/* Urban Dictionary box design */
 .tab2 {
     margin: 5%;
     border: 10px solid #41F3EBff;
     border-radius: 20px;
     padding: 30px;
     width: 42.5%;
+    font-family: 'Montserrat', sans-serif;
+    color: white;
     
 }
 
+/* Urban Dictionary result box design */
 .tab2result {
     margin: 5%;
     border: 10px solid #41F3EBff;
     border-radius: 20px;
     padding: 30px;
     width: 42.5%;
+    font-family: 'Montserrat', sans-serif;
     color: aliceblue;
 }
 
+.tabheader {
+  font-family: 'Montserrat', sans-serif;
+  text-align: center;
+}
+
+/* Calc + Dictionary text color */
 label {
     color: aliceblue;
+    font-family: 'Montserrat', sans-serif;
 }
 
+/* 'Calculate' button design */
 .calculate {
     color: 12px #F008FBff;
     height: 40px;
     width: 100%;
+    font-family: 'Montserrat', sans-serif;
 }
 
-footer {
-    position: absolute;
-    bottom: 0;
-    background-color:#020317ff ;
-    color: white;
-    height: 10%;
-    width: 100%;
+/* Footer design */
+.footer-container {
+  display: flex;
 }
 
-#footer {
-    position: relative;
-    top: 20px;
-    text-align: center;
+.footer {
+  display: flex;
+  background: linear-gradient(#00072e, #050e44);
+  position:sticky;
+  bottom: auto;
+  width: 100%;
+  height: 10%;
+  padding-top: 3vh;
+  justify-content: center;
+  color: white;
+  font-size: smaller;
 }
 
 * {box-sizing:border-box}
 
-/* Slideshow container */
+/* Urban Dictionary slideshow container */
 .slideshow-container {
   max-width: 1000px;
   position: relative;
   margin: auto;
-}
-
-/* Hide the images by default */
-.mySlides {
-  display: none;
 }
 
 /* Next & previous buttons */
@@ -138,13 +166,13 @@ footer {
   user-select: none;
 }
 
-/* Position the "next button" to the right */
+/* "Next button" positioning to the right */
 .next {
   right: 0;
   border-radius: 3px 0 0 3px;
 }
 
-/* On hover, add a black background color with a little bit see-through */
+/* Hover color */
 .prev:hover, .next:hover {
   background-color: rgba(0,0,0,0.8);
 }
@@ -153,6 +181,7 @@ footer {
 .text {
   color: #f2f2f2;
   font-size: 15px;
+  font-family: 'Montserrat', sans-serif;
   padding: 8px 12px;
   position: absolute;
   bottom: 8px;
@@ -164,12 +193,13 @@ footer {
 .numbertext {
   color: #f2f2f2;
   font-size: 12px;
+  font-family: 'Montserrat', sans-serif;
   padding: 8px 12px;
   position: absolute;
   top: 0;
 }
 
-/* The dots/bullets/indicators */
+/* Dots/bullets/indicators */
 .dot {
   cursor: pointer;
   height: 8px;
@@ -200,3 +230,29 @@ footer {
     display: flex;
     justify-content: center;
 }
+
+/* Falling hearts design */
+.hearts {
+  position: fixed;
+  top: -1vh;
+  transform: translateY(0%);
+  left: 0;
+  animation: fall 10s ease-in infinite;
+}
+
+/* Falling hearts animation */
+@keyframes fall {
+  to {
+    transform: translateY(250vh);
+  }
+  0% {
+    opacity: 0;
+  }
+  10% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
